@@ -193,3 +193,11 @@ document.addEventListener('DOMContentLoaded', () => {
     searchBooks();
   });
 });
+
+let total = 0;
+for(let key in localStorage) {
+    if(localStorage.hasOwnProperty(key)) {
+        total += ((localStorage[key].length + key.length) * 2);
+    }
+}
+console.log("Total Local Storage size: " + total + " bytes");
