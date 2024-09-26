@@ -1,0 +1,133 @@
+/* style.css */
+
+/* Reset margin dan padding bawaan */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f0f2f5;
+    color: #333;
+    padding: 20px;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    color: #146d96;
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Styling container */
+  .container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .bg-yellow {
+    background-color: #3bc4ff;
+  }
+  
+  .shadow {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Form styling */
+  form div {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="checkbox"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  input[type="checkbox"] {
+    width: auto;
+  }
+  
+  button {
+    background-color: #0059ff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  button:hover {
+    background-color: #c7aa80;
+  }
+  
+  button:active {
+    background-color: #cc7a00;
+  }
+  
+  /* Card styling for book items */
+  #incompleteBookList,
+  #completeBookList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  [data-testid="bookItem"] {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 10px); /* Two columns */
+  }
+  
+  [data-testid="bookItemTitle"] {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  [data-testid="bookItemAuthor"],
+  [data-testid="bookItemYear"] {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  button[data-testid="bookItemIsCompleteButton"],
+  button[data-testid="bookItemDeleteButton"],
+  button[data-testid="bookItemEditButton"] {
+    margin-right: 10px;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    [data-testid="bookItem"] {
+      width: 100%; /* Full width on smaller screens */
+    }
+  }
+  
